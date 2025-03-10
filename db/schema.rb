@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_10_161207) do
 
   create_table "bookcases", force: :cascade do |t|
     t.integer "limit"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,7 +31,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_10_161207) do
   create_table "books", force: :cascade do |t|
     t.string "tittle"
     t.integer "rating"
-    t.string "coment"
+    t.string "comment"
     t.bigint "bookcase_id", null: false
     t.bigint "author_id", null: false
     t.datetime "created_at", null: false
