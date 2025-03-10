@@ -1,16 +1,19 @@
 class BookcasesController < ApplicationController
   before_action :set_bookcase, only: %i[ show update destroy ]
 
+  # GET /bookcases
   def index
     @bookcases = Bookcase.all
 
     render json: @bookcases
   end
 
+  # GET /bookcases/1
   def show
     render json: @bookcase
   end
 
+  # POST /bookcases
   def create
     @bookcase = Bookcase.new(bookcase_params)
 
@@ -21,6 +24,7 @@ class BookcasesController < ApplicationController
     end
   end
 
+  # PATCH/PUT /bookcase/1
   def update
     if @bookcase.update(bookcase_params)
       render json: @bookcase
@@ -29,6 +33,7 @@ class BookcasesController < ApplicationController
     end
   end
 
+  # DELETE /bookcase/1
   def destroy
     @bookcase.destroy!
   end
