@@ -44,6 +44,6 @@ class BookcasesController < ApplicationController
     end
 
     def bookcase_params
-      params.require(:bookcase).permit(:limit)
+      params.require(:bookcase).permit(:limit, :name)
     end
 end
