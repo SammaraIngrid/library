@@ -9,6 +9,9 @@ Bundler.require(*Rails.groups)
 module Library
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.session_store :cookie_store, key: "_interslice_session"
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use config.session_store, config.session_options
     config.load_defaults 7.2
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do

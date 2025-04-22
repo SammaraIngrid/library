@@ -1,5 +1,6 @@
 class BookcasesController < ApplicationController
   before_action :set_bookcase, only: %i[ show update destroy ]
+  before_action :authenticate_user!
 
   # GET /bookcases
   def index
