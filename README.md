@@ -1,24 +1,26 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# 📚 Library API
 
-* Ruby version
+API pública desenvolvida com **Ruby on Rails 7**, utilizando autenticação via **Devise + JWT**. A API gerencia livros, autores e estantes.
 
-* System dependencies
+## 🔧 Tecnologias
 
-* Configuration
+- Ruby on Rails 7
+- Devise
+- JWT (Token de autenticação)
+- PostgreSQL
+- RSwag (documentação Swagger)
 
-* Database creation
+## 📁 Estrutura dos modelos
 
-* Database initialization
+- **Book**: pertence a um autor e a uma estante.
+- **Author**: tem muitos livros.
+- **Bookcase**: tem muitos livros.
 
-* How to run the test suite
+## 🚀 Como rodar o projeto
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SammaraIngrid/library.git
+   cd library
